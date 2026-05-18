@@ -1,0 +1,16 @@
+from sympy import Symbol, summation, divisors
+
+num = 1
+triangle = 1
+largest_divisor_count = 0
+
+i = Symbol('i')
+summation(i, (i, 0, num))
+
+while largest_divisor_count < 501:
+    if len(divisors(triangle)) > 500:
+        break
+    num+=1
+    triangle = summation(i, (i, 0, num))
+
+print(f"Answer to Problem 12: {triangle}") # SOLVED: 76576500
