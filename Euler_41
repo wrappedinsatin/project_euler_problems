@@ -1,0 +1,29 @@
+
+from sympy import nextprime
+
+def numeric_sort(num: int):
+    in_order = sorted(str(num))
+    sorted_num = ""
+
+    for digit in in_order:
+        sorted_num += digit
+
+    return sorted_num
+
+def solution():
+    number = 2143
+    largest_pan = 0
+    nums_used = "123456789"
+
+    while number < 900000000:
+        try_pandigital = numeric_sort(number)
+        if try_pandigital == nums_used[:len(try_pandigital)]:
+            print(number)
+            largest_pan = number
+        number = nextprime(number)
+
+    return largest_pan
+
+if __name__ == "__main__":
+    print(solution())
+#stops at 7652413, ans = 7652413
