@@ -1,0 +1,28 @@
+def triangle(n):
+    return n * (n + 1) /2
+
+def pentagonal(n):
+    return n * (3*n - 1) /2
+
+def hexagonal(n):
+    return n * (2*n - 1)
+
+all_three = []
+triangle_nums = []
+pentagonal_nums = []
+hexagonal_nums = []
+
+num = 1
+while len(all_three) < 2:
+
+    if triangle(num) in pentagonal_nums:
+        if triangle(num) in hexagonal_nums:
+            all_three.append(triangle(num))
+
+    triangle_nums.append(triangle(num))
+    pentagonal_nums.append(pentagonal(num))
+    hexagonal_nums.append(hexagonal(num))
+    num += 1
+
+print(f"Answer to Problem 45: {int(all_three[-1])}") 
+# SOLVED: 1533776805
