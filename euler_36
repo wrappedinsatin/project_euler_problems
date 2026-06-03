@@ -1,0 +1,25 @@
+palindrome_10 = []
+
+for number in range(1000000):
+    string = str(number)
+    if string == string[::-1]:
+        palindrome_10.append(number)
+
+palindrome_2 = []
+
+for number in palindrome_10:
+    string = ""
+    while number >= 1:
+        string += str(number % 2)
+        number = number // 2
+    string = string[::-1]
+
+    palindrome_2.append(string)
+
+palindrome_sum = 0
+
+for base10, base2 in zip(palindrome_10, palindrome_2):
+    if base2 == base2[::-1]:
+        palindrome_sum += base10
+
+print(f"Answer to problem 36: {palindrome_sum}") # SOLVED: 872187
