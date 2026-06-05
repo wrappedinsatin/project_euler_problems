@@ -6,7 +6,7 @@ def solution():
         if isprime(number):
             primes.append(number)
 
-    cp_sum = 4 # circular prime sum, 17 = number of 1-digit primes
+    cp_sum = 4 # circular prime sum, 4 = number of 1-digit primes
 
     cp_set = set()
 
