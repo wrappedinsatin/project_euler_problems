@@ -1,0 +1,20 @@
+from sympy import binomial
+# binomial is used for combinations
+
+def solution():
+    values = []
+
+    for n in range(23, 101):
+        r = 1
+        while not r > n:
+            value = binomial(n, r)
+            if value > 1000000:
+                values.append(value)
+            r += 1
+
+    num_values = len(values)
+    return num_values
+
+if __name__ == "__main__":
+    num_values = solution()
+    print(f"Answer to Problem 53: {num_values}") # SOLVED: 4075
