@@ -1,0 +1,36 @@
+from sympy import isprime
+
+def solution():
+    primes = []
+    for number in range(10, 1000000):
+        if isprime(number):
+            primes.append(number)
+
+    cp_sum = 4 # circular prime sum, 17 = number of 1-digit primes
+
+    cp_set = set()
+
+    for prime in primes:
+        string = str(prime)
+        track = []
+        for i in range(len(string)):
+            string = string[1:] + string[0]
+            number = int(string)
+            if isprime(number):
+                track.append(number)
+                continue
+            else:
+                break
+        if track:
+            if len(track) == len(str(track[0])):
+                for num in track:
+                    cp_set.add(num)
+
+    cp_sum += len(cp_set)
+
+    return cp_sum
+
+
+if __name__ == "__main__":
+    cp_sum = solution()
+    print(f"Answer to Problem 35: {cp_sum}") # SOLVED: 55
