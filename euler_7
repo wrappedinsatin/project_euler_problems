@@ -1,0 +1,9 @@
+from sympy import nextprime
+prime = 2
+nth = 1
+
+while nth < 10001:
+    prime = nextprime(prime)
+    nth += 1
+
+print(prime) # SOLVED: 104743
