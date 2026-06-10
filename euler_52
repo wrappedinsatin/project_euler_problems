@@ -1,0 +1,16 @@
+num = 100000
+
+while True:
+    x = sorted(str(num))
+    x2 = sorted(str(num * 2))
+    x3 = sorted(str(num * 3))
+    x4 = sorted(str(num * 4))
+    x5 = sorted(str(num * 5))
+    x6 = sorted(str(num * 6))
+
+    if x == x2 == x3 == x4 == x5 == x6:
+        break
+
+    num += 1
+
+print(num) # SOLVED: 142857
