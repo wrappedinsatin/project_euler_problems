@@ -1,0 +1,11 @@
+from sympy import factorial
+
+fact_sums = []
+
+for number in range(3, 100000):
+    string = str(number)
+    sum_fact_digit = sum([factorial(int(digit)) for digit in string])
+    if sum_fact_digit == number:
+        fact_sums.append(number)
+
+print(fact_sums) # SOLVED: 40270 = 145 + 40585
