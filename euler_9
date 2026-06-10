@@ -1,0 +1,21 @@
+from math import sqrt
+
+a = 1
+b = 1
+c = sqrt(a ** 2 + b ** 2)
+
+while True:
+
+    c = sqrt(a ** 2 + b ** 2)
+
+    if (a + b + c) == 1000:
+        break
+
+    if b < a:
+        a = 1
+        b += 1
+    else:
+        a += 1
+
+abc = a * b * c
+print(f"Answer to Problem 9: {int(abc)}") # SOLVED: 31875000
