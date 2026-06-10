@@ -1,0 +1,10 @@
+
+sum_numbers = 0
+
+for i in range(100):
+    number = int(input())
+    sum_numbers += number
+
+string = str(sum_numbers)
+answer = string[:10]
+print(f"Answer to Problem 13: {answer}") # SOLVED: 537376230
