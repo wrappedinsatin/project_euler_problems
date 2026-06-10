@@ -1,0 +1,10 @@
+power_sums = []
+
+for number in range(2, 1000000):
+    string = str(number)
+    sum_digit_pow = sum([int(digit) ** 5 for digit in string])
+    if sum_digit_pow == number:
+        power_sums.append(number)
+
+sum_power_sums = sum(power_sums)
+print(f"Answer to Problem 30: {sum_power_sums}") # SOLVED: 443839
