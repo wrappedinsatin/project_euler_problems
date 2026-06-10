@@ -1,0 +1,15 @@
+diagonals = [1]
+add = 0
+
+while diagonals[-1] != 1001**2:
+    add += 2
+    lapse = 0
+
+    while lapse < 4:
+        diagonals.append(diagonals[-1] + add)
+        lapse += 1
+
+    lapse = 0
+
+spiral_sum = sum(diagonals)
+print(f"Answer to Problem 28: {spiral_sum}") # SOLVED: 669171001
