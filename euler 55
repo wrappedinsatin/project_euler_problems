@@ -1,0 +1,18 @@
+nums = [i for i in range(10000)]
+num_lychrels = 0
+
+for number in nums:
+    copy = number
+    counter = 0
+
+    while counter < 48:
+        number = number + int(str(number)[::-1])
+        check = str(number)
+        counter += 1
+
+        if check == check[::-1]:
+            num_lychrels += 1
+            break
+
+num_non_lychrels = 10000 - num_lychrels
+print(f"Answer to Problem 55: {num_non_lychrels}") # SOLVED: 249
