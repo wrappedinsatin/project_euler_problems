@@ -1,0 +1,19 @@
+def prime_divs(divs):
+    primes = []
+    for div in divs:
+        if isprime(div):
+            primes.append(div)
+    return primes
+
+while counter < 4:
+    n += 1
+    divs = divisors(n, proper=True)
+
+    primes = prime_divs(divs)
+
+    if len(primes) == 4:
+        counter += 1
+    else:
+        counter = 0
+
+print(f"Answer to Problem 47: {n-3}") # SOLVED: 134043
