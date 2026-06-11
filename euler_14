@@ -1,0 +1,19 @@
+longest = 0
+gc = 0 # greatest collatz number
+
+for n in range(1000000):
+    number = n
+    chain = 1
+
+    while n > 1:
+        if n % 2 == 0:
+            n /= 2
+        else:
+            n = 3*n + 1
+        chain += 1
+
+    if chain > longest:
+        longest = chain
+        gc = number
+
+print(f"Answer to Problem 14: {gc}") # SOLVED: 837799
