@@ -1,0 +1,23 @@
+from sympy import isprime
+
+max_primes = 0
+max_a = 0
+max_b = 0
+
+def quad(n, a, b):
+    return n**2 + a*n + b
+
+for a in range(-1000, 1001):
+    for b in range(-1000, 1001):
+        num_primes = 0
+        n = 0
+        while isprime(quad(n, a, b)):
+            num_primes += 1
+            n += 1
+
+        if num_primes > max_primes:
+            max_primes = num_primes
+            max_a = a
+            max_b = b
+
+print(f"Answer to Problem 27: {max_a*max_b}") # SOLVED: -59231
