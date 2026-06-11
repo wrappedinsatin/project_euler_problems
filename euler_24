@@ -1,0 +1,14 @@
+from itertools import permutations
+
+digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+counter = 1
+
+for i in permutations(digits):
+    if counter == 1000000:
+        num = ''
+        for digit in i:
+            num += digit
+        print(num) # SOLVED: 2783915460
+        break
+
+    counter += 1
