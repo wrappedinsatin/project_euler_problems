@@ -1,0 +1,12 @@
+from sympy import totient
+maximum = 0
+max_tote = 0
+
+for n in range(2, 1000001):
+    check = float(n/totient(n))
+
+    if check > max_tote:
+        maximum = n
+        max_tote = check
+
+print(f"Answer to Problem 69: {maximum}") # SOLVED: 510510
